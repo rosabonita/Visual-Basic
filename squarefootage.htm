@@ -1,0 +1,21 @@
+<Script Language = "VBScript">
+Option Explicit 
+DIM plot1w,plot1l,plot2w,plot2l,plot3w,plot3l,plot1a,plot2a,plot3a,total,average
+
+plot1l = Inputbox("What is the length of plot 1?")
+plot1w = Inputbox("What is the width of plot 1?")
+plot2l = Inputbox("What is the length of plot 2?")
+plot2w = Inputbox("What is the width of plot 2?")
+plot3l = Inputbox("What is the length of plot 3?")
+plot3w = Inputbox("What is the width of plot 3?")
+
+plot1a = plot1w * plot1l
+plot2a = plot2w * plot2l
+plot3a = plot3w * plot3l
+
+total = plot1a + plot2a + plot3a
+average = total/3
+
+Document.write "The total square footage of the three plots is " & total
+Document.write "<br>The average square footage of the three plots is " & average
+</script>
