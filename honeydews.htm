@@ -1,0 +1,35 @@
+<html>
+<body>
+<script language=vbscript>
+Option Explicit
+
+Dim wm, cl, hd, wmp, clp, hdp, melons, total
+
+wm = inputbox("How many watermelons are you buying?")
+cl = inputbox("How many cantaloupes are you buying?")
+hd = inputbox("How many honeydew melons are you buying?")
+wmp = wm * 5
+clp = cl * 8
+hdp = hd * 10
+melons = CInt(wm) + cl + hd
+total = CInt(wmp) + clp + hdp
+
+document.write "<br> You are buying:<br>"
+document.write "<br>" & wm & " watermelon(s)"
+document.write "<br>" & cl & " cantaloupe(s)"
+document.write "<br>" & hd & " honeydew melon(s)<br>" 
+document.write "<br>The total number of melons purchased: " & melons & "<br>"
+
+document.write "<br>The total amount due is $" & total & "<br>"
+
+if melons > 10 then
+	 document.write "<br>Thank you for your large purchase"
+else
+		document.write "<br>Thank you for your order"
+end if
+
+
+</script>
+
+</body>
+</html>
