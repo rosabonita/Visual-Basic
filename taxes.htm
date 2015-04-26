@@ -1,0 +1,26 @@
+<script language= "vbscript">
+Option Explicit
+DIM age, value, taxrate, tax
+
+age = InputBox("What is the age of the resident?")
+value = InputBox("What is the value of the vehicle?")
+
+If age >= 65 then
+	 taxrate = .02
+Else 
+		 If  value >= 10000 then
+		 		 taxrate = .07
+			else 
+					 taxrate = .05
+			End If
+End If
+
+
+tax = CInt(value) *taxrate
+
+Document.write "<br>The age of the resident is " &age
+Document.write "<br>The value of the vehicle is " &FormatCurrency(value)
+Document.write "<br>The tax rate is " &FormatPercent(taxrate)
+Document.write "<br>The tax owed to the county is "&FormatCurrency(tax)
+
+</script>
