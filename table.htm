@@ -1,0 +1,38 @@
+<Script Language = "vbscript">
+Option Explicit
+DIM shape, material, size, area, cost, salestax, grandtotal
+
+shape = InputBox("Is the table round or square?")
+material = InputBox("Is the table made out of granite or marble?")
+size = InputBox("What is the size of the table?")
+
+If shape = "round" then
+	 If material = "granite" then
+	 		area = 3.142 * (CInt(size)/2)^2	
+			cost = area *.75
+	 Else 
+			area = 3.142 * (CInt(size)/2)^2	
+			cost = area *.25
+	 End If
+		
+Else
+	If material = "granite" then
+		 area = CInt(size) * size
+		 cost = area * .75
+	Else 
+			 area = CInt(size) *size
+			 cost = area * .25
+	End If
+End If
+
+salestax = cost * .08
+grandtotal = cost + salestax
+
+Document.Write "<br>The shape of the table is " &shape
+Document.Write "<br>The table is made out of " &material
+Document.Write "<br>The size of the table is " &size
+Document.Write "<br>The area of the table is " &area
+Document.Write "<br>The cost of the table is " &FormatCurrency(cost)
+Document.Write "<br>The sales tax is " &FormatCurrency(salestax)
+Document.Write "<br>The grand total is" &FormatCurrency(grandtotal)
+</script>
